@@ -1,6 +1,5 @@
 const router = require('express').Router();
 const { Category, Product } = require('../../models');
-const sequelize = require('../../config/connection');
 
 // The `/api/categories` endpoint
 
@@ -19,7 +18,6 @@ router.get('/', (req, res) => {
       console.log(err);
       res.status(500).json(err);
     });
-
 });
 
 router.get('/:id', (req, res) => {
